@@ -24,6 +24,11 @@ namespace CalculatorApp
             // Намеренная ошибка: нет проверки деления на ноль
             return a / b;
         }
+
+        public static double Power(double base, double exponent)
+        {
+            return Math.Pow(base, exponent);
+        }
         
         // Отсутствует функция возведения в степень
     }
@@ -37,6 +42,7 @@ namespace CalculatorApp
             // Тестирование функций
             Console.WriteLine($"5 + 3 = {Calculator.Add(5, 3)}");
             Console.WriteLine($"10 / 0 = {Calculator.Divide(10, 0)}"); // Вызовет исключение
+            Console.WriteLine($"2 ^ 2 = {Calculator.Power(2, 2)}");
         }
     }
 }
